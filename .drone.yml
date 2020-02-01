@@ -9,14 +9,14 @@
 #     tags: true
 
 pipeline:
-  docker-compose:
-    image: docker/compose:1.24.0
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    commands:
-      - ls -l
-      - cat /drone/src/docker-compose.yaml
-      - docker-compose up -f /drone/src/docker-compose.yaml
+  # docker-compose:
+  #   image: docker/compose:1.24.0
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #   commands:
+  #     - ls -l
+  #     - cat /drone/src/docker-compose.yaml
+  #     - docker-compose up -f /drone/src/docker-compose.yaml
 
   frontend:
     image: node:8.3.0
