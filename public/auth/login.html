@@ -1,11 +1,16 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <title>Welcome to Firebase Hosting</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../main.css" rel="stylesheet">
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/7.6.1/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -43,6 +48,21 @@
             </div>
         </div>
         <!-- header 結束 -->
+
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            歡迎登入本網站～我們優惠活動 <a href="http://tw.yahoo.com" target="_blank" class="alert-link">除濕機</a> 即將於 2020/2/8 13:00
+            開始
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">首頁</a></li>
+                <li class="breadcrumb-item active" aria-current="page">登入</li>
+            </ol>
+        </nav>
 
         <!-- 輪播 開始 -->
         <div class="row">
@@ -102,6 +122,7 @@
                 <br>
                 <br>
                 <div class="text-center">或是</div>
+                <div id='test'></div>
                 <br>
                 <div class="text-center">
                     <a class="btn btn-social btn-lg btn-github text-white col-5" id='anonymousLogin'>
@@ -127,7 +148,24 @@
             <div class="col-12">
                 <footer class="footer mt-auto py-3">
                     <div class="container">
-                        <span class="text-muted">Place sticky footer content here.</span>
+                        <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                            Single toggle
+                        </button>
+
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary active">
+                                <input type="radio" name="options" id="option1" checked> Active
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option2"> Radio
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option3"> Radio
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option3"> Radio
+                            </label>
+                        </div>
                     </div>
                 </footer>
             </div>
@@ -138,16 +176,6 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
         try {
             let app = firebase.app();
             let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
@@ -162,6 +190,8 @@
 </script>
 
 <script>
+    document.getElementById('test').innerHTML = 'hello~~~~~.';
+
     let signIn = document.getElementById('login');
     let logout = document.getElementById('logout');
     let anonLogin = document.getElementById('anonymousLogin');
