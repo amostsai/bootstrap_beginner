@@ -1,0 +1,220 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.0.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.0.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.0.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.0.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.0.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.0.0/firebase-firestore.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- header 開始 -->
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light px-0">
+                    <a class="navbar-brand" href="/">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link active" href="#">最新消息 <span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link" href="#">商品介紹</a>
+                            <a class="nav-item nav-link" href="#">公司簡介</a>
+                            <a class="nav-item nav-link" href="#">與我聯絡</a>
+                        </div>
+                    </div>
+                    <a href="register.html"><button type="button" class="btn btn-success mr-1">註冊</button></a>
+                    <a href="login.html"><button type="button" class="btn btn-primary">登入</button></a>
+                </nav>
+            </div>
+        </div>
+        <!-- header 結束 -->
+
+        <!-- 輪播 開始 -->
+        <div class="row">
+            <div class="col-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://picsum.photos/1500/500?random=25" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/1500/500?random=252" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/1500/500?random=253" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 輪播 結束 -->
+
+        <div class="row mt-3">
+            <!-- 左側邊欄 開始 -->
+            <div class="col-3">
+                <ul class="list-group">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+            <!-- 左側邊欄 結束 -->
+
+            <!-- 右側邊欄 開始 -->
+            <div class="col-9">
+                <p id="load">Firebase SDK Loading&hellip;</p>
+                <div id="content" class="col-md-12 content">
+                    <p>新莊，是一個早在明朝時文獻上就有記載的地方─武朥灣平原(新莊平原)。在乾隆期間(約西元1750年)，因墾照發放及水圳的開鑿形成了三個主要的聚落，分別是新莊街、頭重庄及中港厝。而大排(前身是塭子川)的水體主要都座落在中港厝內，因而稱為「中港大排」.........................,邀請大家來邊走邊聽故事唷!
+                    </p>
+
+                    <table border="1" cellpadding="1" cellspacing="1" style="width:186px">
+                        <tbody>
+                            <tr>
+                                <td style="width:183px">
+                                    <h3 style="text-align:center"><a
+                                            href="https://www.beclass.com/rid=22414d85cc0666a8c545">線上報名</a></h3>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>&nbsp;</p>
+                    <p><img alt="" height="566" src="https://www.beclass.com/share/201905/22414d85cc0666a8c5450746r.jpg"
+                            width="850" class="img-fluid"></p>
+
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <!-- 右側邊欄 結束 -->
+        </div>
+
+        <!-- footer 開始 -->
+        <div class="row">
+            <div class="col-12">
+                <footer class="footer mt-auto py-3">
+                    <div class="container">
+                        <span class="text-muted">Place sticky footer content here.</span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- footer 結束 -->
+    </div>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+            let app = firebase.app();
+            let features = ["auth", "database", "messaging", "storage"].filter(
+                feature => typeof app[feature] === "function"
+            );
+            document.getElementById(
+                "load"
+            ).innerHTML = `Firebase SDK loaded with ${features.join(", ")}`;
+        } catch (e) {
+            console.error(e);
+            document.getElementById("load").innerHTML =
+                "Error loading the Firebase SDK, check the console.";
+        }
+
+        var db = firebase.firestore();
+
+        // 讀取資料
+        // db.collection("books")
+        //     .get()
+        //     .then(querySnapshot => {
+        //         querySnapshot.forEach(doc => {
+        //             console.log(doc.data());
+        //         });
+        //     });
+
+        // 新增資料
+        db.collection("books")
+            .add({
+                name: "Harry Bosch",
+                email: "harry@example.com"
+            })
+            .then(function (docRef) {
+                console.log("Document written with ID: ", docRef.id);
+            })
+            .catch(function (error) {
+                console.error("Error adding document: ", error);
+            });
+
+        //刪除資料
+        // db.collection("books")
+        //     .doc("5UHq2cRWDmywojdRWYrQ")
+        //     .delete()
+        //     .then(function () {
+        //         console.log("Document successfully deleted!");
+        //     })
+        //     .catch(function (error) {
+        //         console.error("Error removing document: ", error);
+        //     });
+
+        // 更新資料
+        db.collection("books")
+            .doc("5UHq2cRWDmywojdRWYrQ")
+            .update({
+                email: "bosch@example.com"
+            })
+            .then(function () {
+                console.log("Document successfully updated!");
+            })
+            .catch(function (error) {
+                console.error("Error updating document: ", error);
+            });
+    });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
