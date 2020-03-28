@@ -1,6 +1,20 @@
 <html>
 
 <head>
+    <script defer src="/__/firebase/7.6.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.6.1/firebase-auth.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {  // 確定DOM建立後執行以下內容（確定firebase API已經載入成功）
+            firebase.auth().onAuthStateChanged(function (user) {  // 檢查使用者是否登入（不管是firebase提供的任何一種登入方法）
+                if (!user) {  // 如果使用者未登入
+                    location.href = "/auth/login.html";  // 導頁到登入頁面
+                }
+            });
+        });
+    </script>
     <link rel="stylesheet" href="/lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <script src="https://pure.github.io/pure/libs/pure.js"></script>
 </head>
@@ -150,7 +164,6 @@
 
 <script src="/lib/jquery-3.4.1.min.js"></script>
 <script src="/lib/popper.min.js"></script>
-<script src="/lib/popper.min.js.map"></script>
 <script src="/lib/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
 
 </html>
